@@ -7,16 +7,27 @@ A modern, full-stack web application for digital procurement management, enablin
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-38B2AC)
 
-## 📋 Table of Contents
+## 🌐 Live Demo
 
+**[� Visit Live Site](https://e-procurement-portal.onrender.com)**
+
+> **Note:** The site is hosted on Render's free tier. First load may take 30-60 seconds if the service is sleeping.
+
+**Test Credentials:**
+- **Admin:** `admin@eprocurement.com` / `admin123`
+- **Vendor:** Create your own account via registration
+
+## �📋 Table of Contents
+
+- [Live Demo](#live-demo)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Running the Application](#running-the-application)
+- [Deployment](#deployment)
 - [API Documentation](#api-documentation)
-- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -215,18 +226,37 @@ npm start
 ```
 Client will run on `http://localhost:3000`
 
-### Production Mode
+## 🚀 Deployment
 
-#### Build Frontend
-```bash
-cd Client
-npm run build
+This application is deployed on [Render](https://render.com) with the following configuration:
+
+### Live Site
+**[https://e-procurement-portal.onrender.com](https://e-procurement-portal.onrender.com)**
+
+### Deployment Details
+- **Platform:** Render (Free Tier)
+- **Build Command:** `npm install --prefix Server && npm install --prefix Client && npm run build --prefix Client`
+- **Start Command:** `npm start --prefix Server`
+- **Auto-Deploy:** Enabled on `main` branch push
+
+### Environment Variables Required
+```
+NODE_ENV=production
+MONGO_URI=<your_mongodb_connection_string>
+JWT_SECRET=<your_jwt_secret>
 ```
 
-#### Deploy Backend
-- Configure your hosting service (Heroku, AWS, DigitalOcean, etc.)
-- Set environment variables on your hosting platform
-- Deploy the `Server` directory
+### Deploying Your Own Instance
+
+1. **Fork this repository**
+2. **Create MongoDB Atlas account** and get connection string
+3. **Sign up on Render.com**
+4. **Create new Web Service** from your GitHub repo
+5. **Configure build/start commands** as shown above
+6. **Add environment variables** in Render dashboard
+7. **Deploy!** 🎉
+
+For detailed deployment instructions, see [Render Documentation](https://render.com/docs).
 
 ## 📡 API Documentation
 
@@ -326,9 +356,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Krishna Sahu**
 - GitHub: [@Krishna-Sahu0-0](https://github.com/Krishna-Sahu0-0)
-- LinkedIn: [Your Profile](https://linkedin.com/in/krishna-sahu00)
+- Repository: [e-Procurement-Website](https://github.com/Krishna-Sahu0-0/e-Procurement-Website)
+- Live Demo: [https://e-procurement-portal.onrender.com](https://e-procurement-portal.onrender.com)
 
 ## 🙏 Acknowledgments
 
@@ -337,10 +368,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Framer Motion for smooth animations
 - MongoDB team for the database
 - Express.js community
+- Render for free hosting
 
 ## 📧 Contact
 
-For questions or support, please email: krsnasahu939@gmail.com
+For questions or support, please open an issue on GitHub.
 
 ## ⭐ Show Your Support
 
@@ -348,4 +380,4 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-**Made with ❤️ and ☕**
+**Made with ❤️ and ☕ by Krishna Sahu**
