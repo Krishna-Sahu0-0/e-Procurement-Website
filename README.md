@@ -9,7 +9,7 @@ A modern, full-stack web application for digital procurement management, enablin
 
 ## 🌐 Live Demo
 
-**[👉🏻 Visit Live Site](https://e-procurement-portal.onrender.com)**
+**[� Visit Live Site](https://e-procurement-portal.onrender.com)**
 
 > **Note:** The site is hosted on Render's free tier. First load may take 30-60 seconds if the service is sleeping.
 
@@ -17,7 +17,7 @@ A modern, full-stack web application for digital procurement management, enablin
 - **Admin:** `admin@eprocurement.com` / `admin123`
 - **Vendor:** Create your own account via registration
 
-## 👉🏻📋 Table of Contents
+## �📋 Table of Contents
 
 - [Live Demo](#live-demo)
 - [Features](#features)
