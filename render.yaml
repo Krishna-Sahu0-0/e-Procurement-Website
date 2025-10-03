@@ -3,14 +3,14 @@ services:
     name: e-procurement-portal
     env: node
     region: oregon
-    buildCommand: cd Server && npm install && npm run build
-    startCommand: cd Server && npm start
+    rootDir: Server
+    buildCommand: npm install && cd ../Client && npm install && npm run build
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
       - key: MONGO_URI
         sync: false
       - key: JWT_SECRET
-        generateValue: true
+        sync: false
+
