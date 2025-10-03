@@ -1,5 +1,5 @@
 const Admin = require('../models/Admin.js');
-const Vendor = require('../models/vendor.js');
+const Vendor = require('../models/Vendor.js');
 const jwt = require('jsonwebtoken');
 
 // Generate JWT Token
