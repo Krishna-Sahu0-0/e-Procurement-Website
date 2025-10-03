@@ -3,9 +3,8 @@ services:
     name: e-procurement-portal
     env: node
     region: oregon
-    rootDir: Server
-    buildCommand: npm install && cd ../Client && npm install && npm run build
-    startCommand: npm start
+    buildCommand: npm install --prefix Server && npm install --prefix Client && npm run build --prefix Client
+    startCommand: npm start --prefix Server
     envVars:
       - key: NODE_ENV
         value: production
