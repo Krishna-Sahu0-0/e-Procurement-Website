@@ -207,8 +207,8 @@ const VendorDashboard = () => {
   return (
     <div className="dashboard-container">
       <nav className="dashboard-nav">
-        <h2>E-Procurement Portal</h2>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+        <h2>{vendorInfo?.companyName} Dashboard</h2>
+        <div className="navbar-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           {/* Profile Dropdown */}
           <div className="profile-dropdown-container" style={{ position: 'relative' }}>
             <div
@@ -238,7 +238,7 @@ const VendorDashboard = () => {
             </div>
             
             {showProfileDropdown && (
-              <div style={{
+              <div className="profile-dropdown-menu" style={{
                 position: 'absolute',
                 top: '55px',
                 right: '0',

@@ -382,13 +382,13 @@
 
   /* Profile dropdown improvements */
   .profile-dropdown-container {
-    position: static;
+    position: relative;
   }
 
   .profile-dropdown-menu {
     right: 0 !important;
     left: auto !important;
-    transform: translateX(calc(-100% + 45px)) !important;
+    transform: none !important;
   }
 }
 
@@ -557,7 +557,7 @@
   background: #e0e0e0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .modal-content {
     padding: 1.5rem;
   }
@@ -575,20 +575,79 @@
     display: none !important;
   }
   
-  /* Make profile photo smaller on mobile and keep it on right */
+  /* Make navbar single line on mobile */
   .dashboard-nav {
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+    align-items: center !important;
   }
   
   .dashboard-nav h2 {
-    font-size: 1.1rem;
-    white-space: nowrap;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin: 0 !important;
+  }
+  
+  .navbar-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex: 0 0 auto !important;
+    flex-wrap: nowrap !important;
+    gap: 0.25rem !important;
+    align-items: center !important;
+  }
+  
+  .profile-dropdown-container {
+    flex-shrink: 0 !important;
+    position: relative !important;
   }
   
   .profile-dropdown-container > div:first-child {
-    width: 40px !important;
-    height: 40px !important;
-    font-size: 1rem !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.85rem !important;
+    border-width: 2px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  /* Make dropdown menu smaller on mobile */
+  .profile-dropdown-menu {
+    min-width: 180px !important;
+    padding: 0.75rem !important;
+    font-size: 0.85rem !important;
+    top: 45px !important;
+  }
+  
+  .profile-dropdown-menu h4 {
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+  }
+  
+  .profile-dropdown-menu p {
+    font-size: 0.75rem !important;
+    margin: 0.5rem 0 0 0 !important;
+  }
+  
+  .profile-dropdown-menu > div:first-child {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .profile-dropdown-menu > div:last-child {
+    gap: 0.6rem !important;
+  }
+  
+  .profile-dropdown-menu label,
+  .profile-dropdown-menu > div > div {
+    padding: 0.4rem !important;
+    font-size: 0.8rem !important;
+    gap: 0.4rem !important;
   }
 }
 

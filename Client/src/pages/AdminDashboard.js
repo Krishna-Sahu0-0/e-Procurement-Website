@@ -267,7 +267,7 @@ const AdminDashboard = () => {
     <div className="dashboard-container">
       <nav className="dashboard-nav">
         <h2>Admin Dashboard</h2>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+        <div className="navbar-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           {/* Profile Dropdown */}
           <div className="profile-dropdown-container" style={{ position: 'relative' }}>
             <div
