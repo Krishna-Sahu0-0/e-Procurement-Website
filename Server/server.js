@@ -31,7 +31,8 @@ app.use('/api/bids', bidRoutes);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../Client/build')));
   
-  app.get('*', (req, res) => {
+  // Handle React routing - catch all requests that don't match API routes
+  app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '../Client/build/index.html'));
   });
 } else {
