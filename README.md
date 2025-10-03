@@ -327,8 +327,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [@Krishna-Sahu0-0](https://github.com/Krishna-Sahu0-0)
+- LinkedIn: [Your Profile](https://linkedin.com/in/krishna-sahu00)
 
 ## 🙏 Acknowledgments
 
@@ -340,7 +340,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-For questions or support, please email: your.email@example.com
+For questions or support, please email: krsnasahu939@gmail.com
 
 ## ⭐ Show Your Support
 
