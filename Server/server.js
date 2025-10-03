@@ -30,9 +30,14 @@ app.use('/api/bids', bidRoutes);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../Client/build')));
   
-  // Handle React routing - catch all requests that don't match API routes
-  app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Client/build/index.html'));
+  // Handle React routing - serve index.html for all non-API routes
+  app.use((req, res, next) => {
+    // If request doesn't start with /api, serve React app
+    if (!req.path.startsWith('/api') && !req.path.startsWith('/health')) {
+      res.sendFile(path.join(__dirname, '../Client/build/index.html'));
+    } else {
+      next();
+    }
   });
 } else {
   app.get('/', (req, res) => {
