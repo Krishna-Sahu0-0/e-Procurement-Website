@@ -9,7 +9,6 @@ const tenderRoutes = require('./routes/tenderRoutes.js');
 const bidRoutes = require('./routes/bidRoutes.js');
 
 dotenv.config();
-connectDB();
 
 const app = express();
 
@@ -44,7 +43,23 @@ if (process.env.NODE_ENV === 'production') {
 const PORT = process.env.PORT || 10000;
 const HOST = '0.0.0.0'; // Bind to all network interfaces
 
-app.listen(PORT, HOST, () => {
-  console.log(`Server running on http://${HOST}:${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+// Start server first, then connect to MongoDB
+const server = app.listen(PORT, HOST, () => {
+  console.log(`✅ Server running on http://${HOST}:${PORT}`);
+  console.log(`📦 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`🔍 Health check available at: http://${HOST}:${PORT}/health`);
+  
+  // Connect to MongoDB after server starts
+  connectDB().catch(err => {
+    console.error('❌ MongoDB connection failed:', err.message);
+    console.log('⚠️  Server is running but database is not connected');
+  });
+});
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM signal received: closing HTTP server');
+  server.close(() => {
+    console.log('HTTP server closed');
+  });
 });
