@@ -16,6 +16,11 @@ const app = express();
 app.use(cors()); // Enable Cross-Origin Resource Sharing
 app.use(express.json()); // To accept JSON data in the body
 
+// Health check endpoint (must be before other routes)
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', message: 'Server is running' });
+});
+
 // Mount the API routers
 app.use('/api/vendors', vendorRoutes);
 app.use('/api/admin', adminRoutes);
@@ -35,6 +40,10 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
+const HOST = '0.0.0.0'; // Bind to all network interfaces
 
-app.listen(PORT, console.log(`Server running on port ${PORT}`));
+app.listen(PORT, HOST, () => {
+  console.log(`Server running on http://${HOST}:${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+});
