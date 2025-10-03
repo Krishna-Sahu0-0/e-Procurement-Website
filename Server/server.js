@@ -13,7 +13,8 @@ dotenv.config();
 const app = express();
 
 app.use(cors()); // Enable Cross-Origin Resource Sharing
-app.use(express.json()); // To accept JSON data in the body
+app.use(express.json({ limit: '50mb' })); // Increase limit for base64 images
+app.use(express.urlencoded({ limit: '50mb', extended: true })); // For URL-encoded data
 
 // Health check endpoint (must be before other routes)
 app.get('/health', (req, res) => {

@@ -14,7 +14,7 @@ function HomePage() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-xl md:text-3xl font-bold text-blue-600"
+            className="text-base md:text-3xl font-bold text-blue-600 whitespace-nowrap"
           >
             E-Procurement Portal
           </motion.h1>
@@ -100,10 +100,10 @@ function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h1 className="text-5xl md:text-6xl font-extrabold text-gray-800 mb-4">
+            <h1 className="text-3xl md:text-6xl font-extrabold text-gray-800 mb-4">
               E-Procurement Portal
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600">
+            <p className="text-lg md:text-2xl text-gray-600">
               Digital procurement made simple and transparent
             </p>
           </motion.div>

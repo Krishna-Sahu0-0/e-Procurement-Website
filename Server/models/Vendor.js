@@ -5,7 +5,8 @@ const vendorSchema = mongoose.Schema({
   companyName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  status: { type: String, required: true, default: 'Pending' } // Pending, Approved, Rejected
+  status: { type: String, required: true, default: 'Pending' }, // Pending, Approved, Rejected
+  profilePhoto: { type: String, default: '' } // Base64 encoded image or URL
 }, {
   timestamps: true
 });
